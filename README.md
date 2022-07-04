@@ -84,7 +84,7 @@ cn.marcus.json.api.JsonFacade如图
 
 文件名cn.marcus.json.api.JsonFacade文件里面格式
 
-扩展json类型:扩展实现类，中间通过`:`区分开 如下
+扩展json类型:扩展实现类，中间通过`=`区分开 如下
 ```text
 fastjson2=cn.marcus.json.api.support.FastJson2Handler
 ```
