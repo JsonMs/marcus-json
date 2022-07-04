@@ -7,7 +7,7 @@
     <!-- GAV坐标 -->
     <groupId>com.github.marcus</groupId>
     <artifactId>marcus-json-spring-boot-starter</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 
     <!-- 打包方式 -->
     <packaging>jar</packaging>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.github.marcus</groupId>
             <artifactId>marcus-json-api</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 

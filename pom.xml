@@ -7,7 +7,7 @@
     <!-- GAV坐标 -->
     <groupId>com.github.marcus</groupId>
     <artifactId>marcus-json</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <modules>
         <module>marcus-json-api</module>
         <module>marcus-json-base</module>

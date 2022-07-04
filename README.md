@@ -33,7 +33,7 @@ Step1: 导入功能模块
 <dependency>
     <groupId>com.github.marcus</groupId>
     <artifactId>marcus-json-api</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 springboot 启动器版本
@@ -41,7 +41,7 @@ springboot 启动器版本
 <dependency>
     <groupId>com.github.marcus</groupId>
     <artifactId>marcus-json-spring-boot-starter</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 Step2: 指定使用的json类型 (可选)
