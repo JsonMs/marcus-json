@@ -115,7 +115,7 @@ public class ExtensionLoader<T> {
      * @throws ClassNotFoundException
      */
     private void readLine(String line) throws ClassNotFoundException {
-        String[] aliasClassName = line.split(":");
+        String[] aliasClassName = line.split("=");
         IfProcess.isTrue(aliasClassName == null || aliasClassName.length != 2, IfProcess::abort);
         String alias = aliasClassName[0].trim();
         String className = aliasClassName[1].trim();

@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 /**
  * json基础配置信息
  *
- * @author jinmai
+ * @author 北城微雨
  * @date 2022/6/5
  */
 @Configuration

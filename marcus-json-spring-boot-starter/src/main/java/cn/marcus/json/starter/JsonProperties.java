@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * json基础配置属性信息
  *
- * @author jinmai
+ * @author 北城微雨
  * @date 2022/6/5
  */
 @ConfigurationProperties(prefix = "spring.json")
