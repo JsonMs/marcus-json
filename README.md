@@ -6,7 +6,7 @@
 
 <p align="center">
     <a href="https://github.com/JsonMs/marcus-json/releases">
-      <img src="https://img.shields.io/badge/Release-1.0-gree"/>
+      <img src="https://img.shields.io/badge/Release-1.0.1-gree"/>
     </a>
      <a href="https://github.com/JsonMs/marcus-json">
       <img alt="JDK" src="https://img.shields.io/badge/JDK-8-blue??style=flat&logo=java&color=0088ff" />
