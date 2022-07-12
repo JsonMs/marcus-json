@@ -10,8 +10,8 @@ public interface Handler {
 
     /**
      * 基础功能处理
-     * @param trueHandler
-     * @param falseHandler
+     * @param trueHandler ture回调函数
+     * @param falseHandler false回调函数
      */
     void process(Runnable trueHandler,Runnable falseHandler);
 }

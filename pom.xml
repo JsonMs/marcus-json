@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- GAV坐标 -->
-    <groupId>com.github.marcus</groupId>
+    <groupId>io.github.jsonms</groupId>
     <artifactId>marcus-json</artifactId>
     <version>1.0.1</version>
     <modules>
@@ -22,5 +22,35 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+
+    <!-- license -->
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <!-- scm -->
+    <scm>
+        <url>https://github.com/JsonMs/marcus-json</url>
+        <connection>scm:git:https://git@github.com/JsonMs/marcus-json.git</connection>
+    </scm>
+
+    <!-- developers -->
+    <developers>
+        <developer>
+            <name>marcus</name>
+            <email>jsonms9527@163.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+8</timezone>
+            <url>https://github.com/JsonMs</url>
+        </developer>
+    </developers>
 
 </project>

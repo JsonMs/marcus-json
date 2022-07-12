@@ -27,8 +27,8 @@ public class JsonUtil {
 
     /**
      * 数据初始化，指定初始化类型
-     * @param jsonType
-     * @param scanPackage
+     * @param jsonType json类型
+     * @param scanPackage 扫描包地址
      */
     public static void init(String jsonType, String... scanPackage) {
         jsonFacade = JsonFactory.init(jsonType, scanPackage);
@@ -36,7 +36,7 @@ public class JsonUtil {
 
     /**
      * 转化为json字符串
-     * @param object
+     * @param object 格式化对象
      * @return String {@link String}
      */
     public static String toJSONString(Object object) {
@@ -49,8 +49,8 @@ public class JsonUtil {
 
     /**
      * 转化为对象
-     * @param jsonStr
-     * @return
+     * @param jsonStr json字符串
+     * @return 格式化对象
      */
     public static Object parseObject(String jsonStr) {
         return parseObject(jsonStr,Object.class);
@@ -58,10 +58,10 @@ public class JsonUtil {
 
     /**
      * 转化为object对象
-     * @param jsonStr
-     * @param clazz
-     * @param <T>
-     * @return
+     * @param jsonStr json字符串
+     * @param clazz 格式化类
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T parseObject(String jsonStr, Class<T> clazz) {
         if (Objects.isBlank(jsonStr)) {
@@ -73,10 +73,10 @@ public class JsonUtil {
 
     /**
      * 转化为object对象，支持泛型
-     * @param jsonStr
-     * @param valueTypeRef
-     * @param <T>
-     * @return
+     * @param jsonStr json字符串
+     * @param valueTypeRef 格式化类型
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T parseObject(String jsonStr, TypeReference<T> valueTypeRef) {
         if (Objects.isBlank(jsonStr)) {
@@ -88,10 +88,10 @@ public class JsonUtil {
 
     /**
      * 转化为object对象
-     * @param object
-     * @param clazz
-     * @param <T>
-     * @return
+     * @param object 对象
+     * @param clazz 格式化类
+     * @param <T> 泛型
+     * @return 格式化类
      */
     public static <T> T parseObject(Object object, Class<T> clazz) {
         if (object == null) {
@@ -103,10 +103,10 @@ public class JsonUtil {
 
     /**
      * 转化为object对象，支持泛型
-     * @param object
-     * @param valueTypeRef
-     * @param <T>
-     * @return
+     * @param object 对象
+     * @param valueTypeRef 格式化类型
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T parseObject(Object object, TypeReference<T> valueTypeRef) {
         if (object == null) {
@@ -118,10 +118,10 @@ public class JsonUtil {
 
     /**
      * 转化数组对象
-     * @param jsonStr
-     * @param clazz
-     * @param <T>
-     * @return
+     * @param jsonStr json字符串
+     * @param clazz 格式化类
+     * @param <T> 泛型
+     * @return 格式化数组
      */
     public static <T> List<T> parseArray(String jsonStr, Class<T> clazz) {
         if (Objects.isBlank(jsonStr)) {
@@ -134,10 +134,10 @@ public class JsonUtil {
 
     /**
      * json读取指定路径数据，支持特定过滤
-     * @param object
-     * @param jsonPath
-     * @param predicates
-     * @return
+     * @param object 格式化对象
+     * @param jsonPath json路径
+     * @param predicates 过滤条件
+     * @return 格式化对象
      */
     public static Object read(Object object, String jsonPath, Predicate... predicates) {
         if (object == null || Objects.isBlank(jsonPath)) {
@@ -149,12 +149,12 @@ public class JsonUtil {
 
     /**
      * json读取指定路径数据，支持特定过滤 格式化对象
-     * @param object
-     * @param jsonPath
-     * @param clazz
-     * @param predicates
-     * @param <T>
-     * @return
+     * @param object 格式化对象
+     * @param jsonPath json路径
+     * @param clazz 格式化类
+     * @param predicates 过滤条件
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T read(Object object, String jsonPath, Class<T> clazz, Predicate... predicates) {
         if (object == null || Objects.isBlank(jsonPath)) {
@@ -166,11 +166,11 @@ public class JsonUtil {
 
     /**
      * json读取指定路径数据 格式化对象（泛型）
-     * @param object
-     * @param jsonPath
-     * @param valueTypeRef
-     * @param <T>
-     * @return
+     * @param object 对象
+     * @param jsonPath json路径
+     * @param valueTypeRef 格式化类型
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T read(Object object, String jsonPath, TypeReference<T> valueTypeRef) {
         if (object == null || Objects.isBlank(jsonPath)) {
@@ -183,10 +183,10 @@ public class JsonUtil {
     //====================== JSONRead ==============================
     /**
      * 读取json文件转化为对应类
-     * @param path
-     * @param clazz
-     * @param <T>
-     * @return
+     * @param path json文件路径
+     * @param clazz 格式化对象类
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T readJson(String path,Class<T> clazz) {
         if (Objects.isBlank(path)) {
@@ -198,10 +198,10 @@ public class JsonUtil {
 
     /**
      * 读取json文件转化为对应类
-     * @param path
-     * @param valueTypeRef
-     * @param <T>
-     * @return
+     * @param path json路径
+     * @param valueTypeRef 格式化类型
+     * @param <T> 泛型
+     * @return 格式化对象
      */
     public static <T> T readJson(String path,TypeReference<T> valueTypeRef) {
         if (Objects.isBlank(path)) {
@@ -213,10 +213,10 @@ public class JsonUtil {
 
     /**
      * 读取json文件转化为对应类
-     * @param path
-     * @param clazz
-     * @param <T>
-     * @return
+     * @param path json文件路径
+     * @param clazz 格式化类
+     * @param <T> 泛型
+     * @return 格式化数组
      */
     public static <T> List<T> readJsonArray(String path,Class<T> clazz) {
         if (Objects.isBlank(path)) {
@@ -228,8 +228,8 @@ public class JsonUtil {
 
     /**
      * 写json到指定文件路径处
-     * @param path
-     * @param object
+     * @param path 写入json文件路径
+     * @param object 写入数据
      */
     public static void writeJson(String path,Object object){
         if (Objects.isBlank(path) || object == null) {
@@ -241,8 +241,8 @@ public class JsonUtil {
 
     /**
      * 写json到指定输出流
-     * @param os
-     * @param object
+     * @param os 输出对象
+     * @param object 数据
      */
     public static void writeJson(OutputStream os, Object object){
         if (object == null) {

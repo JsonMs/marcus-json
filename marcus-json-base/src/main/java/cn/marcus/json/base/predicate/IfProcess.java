@@ -25,7 +25,6 @@ public class IfProcess {
      *
      * @param expression 判断条件
      * @param runnable   指定操作
-     * @param
      */
     public static void isTrue(boolean expression, Runnable runnable) {
         if (expression) {
@@ -49,7 +48,6 @@ public class IfProcess {
      *
      * @param object   对象
      * @param runnable 指定操作
-     * @param
      */
     public static void isNull(Object object, Runnable runnable) {
         if (object == null) {
@@ -62,7 +60,6 @@ public class IfProcess {
      *
      * @param object   对象
      * @param runnable 运行数据
-     * @param
      */
     public static void nonNull(Object object, Runnable runnable) {
         if (object != null) {
@@ -75,7 +72,7 @@ public class IfProcess {
      *
      * @param object   对象
      * @param consumer 运行数据
-     * @param
+     * @param <T> 泛型
      */
     public static <T> void nonNull(T object, Consumer<T> consumer) {
         if (object != null) {
@@ -88,7 +85,6 @@ public class IfProcess {
      *
      * @param collection 对象
      * @param runnable   运行数据
-     * @param
      */
     public static void isEmpty(Collection<?> collection, Runnable runnable) {
         if (collection == null || collection.isEmpty()) {
@@ -101,7 +97,6 @@ public class IfProcess {
      *
      * @param collection 对象
      * @param runnable   运行数据
-     * @param
      */
     public static void isNotEmpty(Collection<?> collection, Runnable runnable) {
         if (collection != null && !collection.isEmpty()) {
@@ -114,7 +109,6 @@ public class IfProcess {
      *
      * @param collection 对象
      * @param consumer   运行数据
-     * @param
      */
     public static void isEmpty(Collection<?> collection, Consumer<Collection<?>> consumer) {
         if (collection == null || collection.isEmpty()) {
@@ -127,7 +121,6 @@ public class IfProcess {
      *
      * @param collection 对象
      * @param consumer   运行数据
-     * @param
      */
     public static void isNotEmpty(Collection<?> collection, Consumer<Collection<?>> consumer) {
         if (collection != null && !collection.isEmpty()) {
@@ -140,8 +133,8 @@ public class IfProcess {
     /**
      * 多语言表达方式
      *
-     * @param expression
-     * @return
+     * @param expression 表达式
+     * @return 回调方法
      */
     public static Handler of(boolean expression) {
         return (trueHandler, falseHandler) -> {

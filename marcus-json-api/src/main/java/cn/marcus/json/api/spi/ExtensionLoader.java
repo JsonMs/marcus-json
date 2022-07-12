@@ -64,8 +64,8 @@ public class ExtensionLoader<T> {
     /**
      * 加载类目
      *
-     * @param classLoader
-     * @param scanPaths
+     * @param classLoader 类加载器
+     * @param scanPaths 扫描路径
      */
     private void load4ClassLoader(Class<T> classLoader, List<String> scanPaths) {
         IfProcess.isEmpty(scanPaths, IfProcess::abort);
@@ -111,8 +111,8 @@ public class ExtensionLoader<T> {
     /**
      * 读取一行数据，并填充到收集器中
      *
-     * @param line
-     * @throws ClassNotFoundException
+     * @param line 一行数据
+     * @throws ClassNotFoundException 类不存在异常
      */
     private void readLine(String line) throws ClassNotFoundException {
         String[] aliasClassName = line.split("=");
@@ -133,8 +133,8 @@ public class ExtensionLoader<T> {
     /**
      * 通过别名获取相应实例(无参)
      *
-     * @param alias
-     * @return
+     * @param alias 别名
+     * @return 无参的实例
      */
     public T getExtension(String alias) {
         ExtensionClass<T> extensionClass = aliasExtensionCollector.get(alias);
@@ -145,10 +145,10 @@ public class ExtensionLoader<T> {
     /**
      * 通过别名获取相应的实例(有参)
      *
-     * @param alias
-     * @param argTypes
-     * @param args
-     * @return
+     * @param alias 别名
+     * @param argTypes 参数类型
+     * @param args  参数
+     * @return 有参的实例
      */
     public T getExtension(String alias, Class[] argTypes, Object[] args) {
         ExtensionClass<T> extensionClass = aliasExtensionCollector.get(alias);

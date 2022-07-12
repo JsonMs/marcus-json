@@ -14,7 +14,7 @@ public @interface AutoJson {
 
     /**
      * json类型
-     * @return
+     * @return 选择的json类型
      */
     String value() default "JACKSON";
 }

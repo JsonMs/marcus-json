@@ -33,8 +33,8 @@ public abstract class AbstractJsonFacade implements JsonFacade{
 
     /**
      * 读取文件为字符串
-     * @param path
-     * @return
+     * @param path 读取路径
+     * @return json字符串
      */
     protected String readFile2String(String path){
         try {

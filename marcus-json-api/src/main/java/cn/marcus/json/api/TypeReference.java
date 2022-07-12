@@ -27,7 +27,7 @@ public abstract class TypeReference<T> implements Comparable<TypeReference<T>> {
 
     /**
      * 获取类型
-     * @return
+     * @return 类型
      */
     public Type getType() {
         return this._type;
@@ -35,8 +35,8 @@ public abstract class TypeReference<T> implements Comparable<TypeReference<T>> {
 
     /**
      * 比较
-     * @param o
-     * @return
+     * @param o 对象
+     * @return 比较大小
      */
     @Override
     public int compareTo(TypeReference<T> o) {

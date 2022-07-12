@@ -6,7 +6,13 @@
 
 <p align="center">
     <a href="https://github.com/JsonMs/marcus-json/releases">
-      <img src="https://img.shields.io/badge/Release-1.0.1-gree"/>
+      <img src="https://img.shields.io/badge/ReleaseTag-1.0.1-gree"/>
+    </a>
+    <a href="https://search.maven.org/artifact/io.github.jsonms/marcus-json-spring-boot-starter/1.0.1/jar">
+      <img src="https://img.shields.io/badge/Release Springboot-1.0.1-gree"/>
+    </a>
+    <a href="https://search.maven.org/artifact/io.github.jsonms/marcus-json-api/1.0.1/jar">
+      <img src="https://img.shields.io/badge/Release Base API-1.0.1-gree"/>
     </a>
      <a href="https://github.com/JsonMs/marcus-json">
       <img alt="JDK" src="https://img.shields.io/badge/JDK-8-blue??style=flat&logo=java&color=0088ff" />
@@ -31,7 +37,7 @@ Step1: 导入功能模块
 基础api版本
 ```xml
 <dependency>
-    <groupId>com.github.marcus</groupId>
+    <groupId>io.github.jsonms</groupId>
     <artifactId>marcus-json-api</artifactId>
     <version>1.0.1</version>
 </dependency>
@@ -39,7 +45,7 @@ Step1: 导入功能模块
 springboot 启动器版本
 ```xml
 <dependency>
-    <groupId>com.github.marcus</groupId>
+    <groupId>io.github.jsonms</groupId>
     <artifactId>marcus-json-spring-boot-starter</artifactId>
     <version>1.0.1</version>
 </dependency>

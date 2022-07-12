@@ -55,7 +55,7 @@ public class AutoJsonProcessor extends AbstractProcessor {
     /**
      * 打印日志错误信息
      *
-     * @param message
+     * @param message 日志消息
      */
     private void logError(String message) {
         processingEnv.getMessager().printMessage(Diagnostic.Kind.ERROR, message);
@@ -64,7 +64,7 @@ public class AutoJsonProcessor extends AbstractProcessor {
     /**
      * 打印日志警告信息
      *
-     * @param message
+     * @param message 日志消息
      */
     private void logWarning(String message) {
         processingEnv.getMessager().printMessage(Diagnostic.Kind.WARNING, "WARNING:" + message);
@@ -73,7 +73,7 @@ public class AutoJsonProcessor extends AbstractProcessor {
     /**
      * 打印日志信息
      *
-     * @param message
+     * @param message 日志消息
      */
     private void log(String message) {
         this.processingEnv.getMessager().printMessage(Diagnostic.Kind.NOTE, message);

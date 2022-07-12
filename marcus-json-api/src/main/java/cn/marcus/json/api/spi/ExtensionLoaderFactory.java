@@ -20,7 +20,7 @@ public class ExtensionLoaderFactory {
      * 获取或创建 clazz扩展接口的 {@link ExtensionLoader}
      *
      * @param clazz 扩展接口
-     * @param <T>
+     * @param <T> 泛型
      * @return 扩展接口的 {@link ExtensionLoader}
      */
     public static <T> ExtensionLoader<T> getExtensionLoader(Class<T> clazz, List<String> exclusionClassNames, String... scanPaths) {

@@ -14,7 +14,7 @@ public @interface Extension {
 
     /**
      * 别名扩展实现名称
-     * @return
+     * @return 扩展实现名称
      */
     String value();
 }

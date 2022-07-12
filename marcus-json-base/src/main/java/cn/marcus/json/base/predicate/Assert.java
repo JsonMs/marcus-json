@@ -14,9 +14,9 @@ public class Assert {
     /**
      * 如果判断条件是true，抛出指定异常信息
      *
-     * @param expression         判断条件
-     * @param supplier 指定异常信息
-     * @param <E>                指定异常信息
+     * @param expression 判断条件
+     * @param supplier   指定异常信息
+     * @param <E>        指定异常信息
      */
     public static <E extends RuntimeException> void isTrue(boolean expression, Supplier<E> supplier) {
         if (expression) {
@@ -27,9 +27,9 @@ public class Assert {
     /**
      * 如果判断条件是true，抛出指定异常信息
      *
-     * @param expression         判断条件
-     * @param supplier 指定异常信息
-     * @param <E>
+     * @param expression 判断条件
+     * @param supplier   指定异常信息
+     * @param <E>        泛型
      */
     public static <E extends RuntimeException> void isFalse(boolean expression, Supplier<E> supplier) {
         isTrue(!expression, supplier);
@@ -38,9 +38,9 @@ public class Assert {
     /**
      * 如果判断对象是null，抛出指定异常信息
      *
-     * @param object             判断对象
+     * @param object   判断对象
      * @param supplier 指定异常信息
-     * @param <E>
+     * @param <E>      泛型
      */
     public static <E extends RuntimeException> void isNull(Object object, Supplier<E> supplier) {
         if (object == null) {
@@ -51,9 +51,9 @@ public class Assert {
     /**
      * 如果判断对象不是是null，抛出指定异常信息
      *
-     * @param object             判断对象
+     * @param object   判断对象
      * @param supplier 指定异常信息
-     * @param <E>
+     * @param <E>      泛型
      */
     public static <E extends RuntimeException> void nonNull(Object object, Supplier<E> supplier) {
         if (object != null) {
@@ -66,7 +66,7 @@ public class Assert {
      *
      * @param collection 判断集合
      * @param supplier   指定异常信息
-     * @param <E>
+     * @param <E>        泛型
      */
     public static <E extends RuntimeException> void isEmpty(Collection<?> collection, Supplier<E> supplier) {
         if (collection == null || collection.isEmpty()) {
@@ -78,8 +78,8 @@ public class Assert {
      * 如果判断集合不是空集合，抛出指定异常信息
      *
      * @param collection 判断集合
-     * @param supplier 指定异常信息
-     * @param <E>
+     * @param supplier   指定异常信息
+     * @param <E>        泛型
      */
     public static <E extends RuntimeException> void isNotEmpty(Collection<?> collection, Supplier<E> supplier) {
         if (collection != null && !collection.isEmpty()) {

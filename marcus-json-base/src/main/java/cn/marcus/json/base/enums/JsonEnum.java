@@ -14,7 +14,7 @@ public enum JsonEnum {
 
     /***
      * 构造方法
-     * @param clazz
+     * @param clazz 类型
      */
     JsonEnum(String clazz) {
         this.clazz = clazz;

@@ -49,8 +49,8 @@ public class JsonFactory {
     /**
      * 数据初始化
      *
-     * @param jsonType
-     * @return
+     * @param jsonType json类型
+     * @return json工厂
      */
     public static JsonFacade init(String jsonType, String... scanPackage) {
         load(scanPackage);
@@ -68,7 +68,7 @@ public class JsonFactory {
     /**
      * 预热json类实例
      *
-     * @param className
+     * @param className 类名称
      */
     private static void warmUp(String className) {
         try {
@@ -81,8 +81,8 @@ public class JsonFactory {
     /**
      * 创建json接口
      *
-     * @param jsonType
-     * @return
+     * @param jsonType json类型
+     * @return json工厂
      */
     private static JsonFacade createJson(String jsonType) {
         Supplier<JsonFacade> supplier = FACTORY.get(jsonType);
