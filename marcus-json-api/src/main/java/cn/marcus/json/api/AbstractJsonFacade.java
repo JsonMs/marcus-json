@@ -67,27 +67,25 @@ public abstract class AbstractJsonFacade implements JsonFacade{
 
     @Override
     public Object read(Object json, String jsonPath,Predicate... predicates){
-        return JsonPath.read(json, jsonPath,predicates);
+        return JsonPath.parse(toJSONString(json)).read(jsonPath,predicates);
     }
 
     @Override
     public <T> T read(Object json, String jsonPath,Class<T> clazz,Predicate... predicates){
-        return JsonPath.parse(json).read(jsonPath,clazz,predicates);
+        Object read = JsonPath.parse(toJSONString(json)).read(jsonPath, predicates);
+        return parseObject(toJSONString(read),clazz);
     }
 
     @Override
     public <T> T read(Object json, String jsonPath,TypeReference<T> valueTypeRef){
-        return JsonPath.parse(json).read(jsonPath, new TypeRef<T>() {
-            @Override
-            public Type getType() {
-                return valueTypeRef.getType();
-            }
-        });
+        Object read = JsonPath.parse(toJSONString(json)).read(jsonPath);
+        return parseObject(toJSONString(read),valueTypeRef);
     }
 
     @Override
-    public void set(Object jsonObject,String path,Object object){
-        JsonPath.parse(jsonObject).set(path, object);
+    public Object set(Object jsonObject,String path,Object object){
+        String jsonString = JsonPath.parse(toJSONString(jsonObject)).set(path, object).jsonString();
+        return parseObject(jsonString,jsonObject.getClass());
     }
 
 }

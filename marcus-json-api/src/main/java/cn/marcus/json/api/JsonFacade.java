@@ -143,5 +143,5 @@ public interface JsonFacade {
      * @param path json路径
      * @param object 设置值
      */
-    void set(Object jsonObject,String path,Object object);
+    Object set(Object jsonObject,String path,Object object);
 }
