@@ -27,7 +27,15 @@
 
   本功能希望实现json方式的统一管理和扩展和灵活一键切换功能，简化接入方式和打通各个json的隔阂，实现类似type-c接口一样的通用能力
 对于已经接入其他json的，可以先使用对应json类型的实现替换原来的方法，然后实现丝滑切换不同的json类型方式，也支持扩展自己的json类型
+
+<p align="center">
+    <a href="https://github.com/JsonMs/marcus-json">
+      <img alt="Repobeats analytics image" src="https://repobeats.axiom.co/api/embed/3784d0a3358ff55e7d295b34c1b2914afe926d99.svg" />
+    </a>
+</p>
 <h2/>
+
+
 
 # 如何添加
 基础组建功能版本api，封装了对象、数组、json文件、json路径功能，支持自定义扩展json组件能力
