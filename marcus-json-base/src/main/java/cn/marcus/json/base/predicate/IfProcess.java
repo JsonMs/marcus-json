@@ -14,13 +14,6 @@ import java.util.function.Consumer;
 public class IfProcess {
 
     /**
-     * 终止功能
-     */
-    public static void abort() {
-        return;
-    }
-
-    /**
      * 如果判断条件是true，执行指定函数
      *
      * @param expression 判断条件
