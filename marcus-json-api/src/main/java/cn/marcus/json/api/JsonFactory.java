@@ -39,7 +39,9 @@ public class JsonFactory {
         ExtensionLoader<JsonFacade> extensionLoader = ExtensionLoaderFactory.getExtensionLoader(JsonFacade.class, Lists.newArrayList(AbstractJsonFacade.class.getName()), scanPackage);
         if (extensionLoader != null) {
             Map<String, ExtensionClass<JsonFacade>> collector = extensionLoader.getAllCollector();
-            IfProcess.isNull(collector, IfProcess::abort);
+            if (collector == null) {
+                return;
+            }
             collector.entrySet().forEach(
                     entry -> FACTORY.put(entry.getKey(),
                             () -> entry.getValue().getExtInstance()));

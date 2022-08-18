@@ -68,7 +68,10 @@ public class ExtensionLoader<T> {
      * @param scanPaths 扫描路径
      */
     private void load4ClassLoader(Class<T> classLoader, List<String> scanPaths) {
-        IfProcess.isEmpty(scanPaths, IfProcess::abort);
+        if (scanPaths == null || scanPaths.isEmpty()) {
+            return;
+        }
+
         Reflections reflections = new Reflections(scanPaths, this.getClass().getClassLoader());
         Set<Class<? extends T>> classes = reflections.getSubTypesOf(classLoader);
         for (Class<? extends T> clazz : classes) {
@@ -93,7 +96,10 @@ public class ExtensionLoader<T> {
     private void load4ClassLoader(ClassLoader classLoader, String spiFile) {
         //读取多个spi文件
         Enumeration<URL> urls = classLoader != null ? classLoader.getResources(spiFile) : ClassLoader.getSystemResources(spiFile);
-        IfProcess.isNull(urls, IfProcess::abort);
+        if (urls == null) {
+            return;
+        }
+
         while (urls.hasMoreElements()) {
             URL url = urls.nextElement();
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), Charset.defaultCharset()))) {
@@ -116,7 +122,10 @@ public class ExtensionLoader<T> {
      */
     private void readLine(String line) throws ClassNotFoundException {
         String[] aliasClassName = line.split("=");
-        IfProcess.isTrue(aliasClassName == null || aliasClassName.length != 2, IfProcess::abort);
+        if(aliasClassName == null || aliasClassName.length != 2){
+            return;
+        }
+
         String alias = aliasClassName[0].trim();
         String className = aliasClassName[1].trim();
         Class<?> clazz = Class.forName(className, false, this.getClass().getClassLoader());
